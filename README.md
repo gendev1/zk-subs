@@ -7,9 +7,37 @@
 - [ ] Create ZKP for the user
 - [ ] Verify Contract 
 - [ ] Payment Withdraw for Provider
+
+### UI
+
+**Provider**
+
+- [ ] Create Provider Components
+- [ ] Wallet Connection (**use ThirdWeb or any other**)
+- [ ] Provider Form (name, id (auto), wallet address))
+- [ ] Connect Provider Contract 
+
+**Subscriber**
+
+- [ ] Create Subscriber Components
+- [ ] Wallet Connection (**use ThirdWeb or any other**) for payments
+- [ ] Create Key Pairs using (ThirdWeb or any other)
+- [ ] Subscriber Form (created public key, sub-id(auto))
+- [ ] Make payment to Broker
+- [ ] Send transaction hash, public_key, sub-id to **Broker Backend**
+- [ ] **Broker Backend** Verify the transaction hash and create ZKP
+- [ ] **Broker Backend** Send ZKP to **Broker Frontend**
+- [ ] Download button for ZKP
+
+**Provider Auth Page**
+
+- [ ] Create component or lirary for Provider Auth
+- [ ] Button (Auth with ZK-Subs)
+- [ ] OnClick open a model with option to upload ZKP
+- [ ] Upload ZKP and verify using Verification Contract
+- [ ] **Provider** should also be able to verify the transaction hash using **Broker Backend**
+- [ ] If verified, show the service to the user
   
-
-
 
 ### Provider -> Broker Registration
 ```javascript
