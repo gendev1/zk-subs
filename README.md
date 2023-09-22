@@ -1,4 +1,5 @@
 # zk-subs
+A privacy preserving subscription SDK built for EVM Compatible blockchains
 
 ## TODO
 
