@@ -7,6 +7,7 @@
 - [ ] Create ZKP for the user
 - [ ] Verify Contract 
 - [ ] Payment Withdraw for Provider
+- [ ] Integrate payment for Subscriber / Ideally connect Superfluid
 
 ### UI
 
@@ -37,7 +38,11 @@
 - [ ] Upload ZKP and verify using Verification Contract
 - [ ] **Provider** should also be able to verify the transaction hash using **Broker Backend**
 - [ ] If verified, show the service to the user
-  
+
+
+** Nice To Haves **
+- [ ] Integrate bridge to allow streams on any chain, Can be a project seperately altogether
+- [ ] Deploy to starknet
 
 ### Provider -> Broker Registration
 ```javascript
