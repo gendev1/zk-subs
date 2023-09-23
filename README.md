@@ -1,4 +1,6 @@
 # zk-subs
+A privacy preserving subscription SDK built for EVM Compatible blockchains
+Built using Polygon ID, and Unlock Protocol, Lit Protocol, Graph Protocol
 
 ## TODO
 
@@ -7,6 +9,13 @@
 - [ ] Create ZKP for the user
 - [ ] Verify Contract 
 - [ ] Payment Withdraw for Provider
+- [ ] Integrate payment for Subscriber / Ideally connect Superfluid
+
+### Smart Contracts
+- [ ] Complete Onchain issuer tutorial with Polygon ID
+- [ ] Create Subscription NFTs with Unlock Protocol
+- [ ] Create Keys using Lit Protocol to encrypt wallet address
+- [ ] Create Sub graph using Graph Protocol
 
 ### UI
 
@@ -37,7 +46,12 @@
 - [ ] Upload ZKP and verify using Verification Contract
 - [ ] **Provider** should also be able to verify the transaction hash using **Broker Backend**
 - [ ] If verified, show the service to the user
-  
+
+
+**Nice To Haves**
+- [ ] Integrate bridge to allow streams on any chain, Can be a project seperately altogether
+- [ ] Deploy to starknet
+
 
 ### Provider -> Broker Registration
 ```javascript
