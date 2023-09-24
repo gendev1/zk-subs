@@ -1,13 +1,13 @@
 {
     "$metadata": {
-        "type": "usersubscription",
+        "type": "userpayment",
         "uris": {
-            "jsonLdContext": "ipfs://QmXdDenwCpGXJX9WGj28hzRZC4SUim4kv1AuKv9ARqzfuh"
+            "jsonLdContext": "ipfs://Qmdw8TSCJyVtWaKXHdxSYVfMsG4DFgtgAhHmN2EFXZeEwm"
         },
-        "version": "1.0"
+        "version": "1.0.1"
     },
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "contains subscription claim",
+    "description": "contains payment claim",
     "title": "maskd",
     "properties": {
         "@context": {
@@ -63,14 +63,14 @@
                     "format": "uri",
                     "type": "string"
                 },
-                "stream-details": {
-                    "description": "Contains stream details",
-                    "title": "stream details",
-                    "type": "object"
+                "isnotused": {
+                    "description": "check if the stream is used or not",
+                    "title": "isnotused",
+                    "type": "boolean"
                 }
             },
             "required": [
-                "stream-details"
+                "isnotused"
             ],
             "type": "object"
         },
