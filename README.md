@@ -1,5 +1,3 @@
-Certainly! Here's the full README for your MaskD project:
-
 # MaskD - Anonymous Payments to Any Service Provider
 
 ![MaskD Logo](https://cdn.discordapp.com/attachments/1105610567454052406/1155459855277105172/skunks.ai_an_dystopian_society_filled_with_masked_people_in_a_b_c817cb1b-a564-4e30-a442-e363db1fff78.png)
