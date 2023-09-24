@@ -1,10 +1,18 @@
 # MaskD - Anonymous Payments to Any Service Provider
 
+Built during ETHGlobal NYC 2023
+
+---
+
 ![MaskD Logo](https://cdn.discordapp.com/attachments/1105610567454052406/1155459855277105172/skunks.ai_an_dystopian_society_filled_with_masked_people_in_a_b_c817cb1b-a564-4e30-a442-e363db1fff78.png)
 
 ## What is MaskD?
 
 MaskD is a revolutionary tool that empowers you to make anonymous payments to any service provider you choose. Whether it's streaming services like Netflix, online gaming platforms like FanDuel, or any other service, MaskD lets you keep your identity a secret while accessing the services you love.
+
+## The Problem
+
+With raising concerns towards privacy, and rampant data and crypto hacks. It is more than ever required that we focus on technologies that can preserve our privacy while not detoriating if not improving the UX of our day to day services.
 
 ## User Flow
 
@@ -14,12 +22,9 @@ Here's a step-by-step guide to using MaskD:
 
 ![Get Started](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/1.png)
 
-
 ### 2. Provider Adds Their Details
 
 ![Provider Registration](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/4.png)
-
-![2](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/5.png)
 
 Service providers, such as streaming services or online platforms, can register with MaskD. They provide their details to offer their services while keeping user identities confidential.
 
@@ -33,6 +38,9 @@ As a subscriber, you can create a subscription to access your desired service. C
 
 Once your subscription is set up, you'll receive a confirmation and zero-knowledge proof (ZKP) to prove your payment without revealing your identity.
 
+### 4. Access Your Service
+
+![Access Service](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/5.png)
 
 Finally, you can visit the website of your chosen service provider and use your zero-knowledge proof (ZKP) to access the service. Enjoy your favorite content or services without compromising your privacy!
 
@@ -50,9 +58,9 @@ Here's how you can use MaskD to pay for services:
 
 4. **Access Your Service**: Then, you go to the website of the service you want, like Netflix or FanDuel, and show them your zero-knowledge proof. They'll give you access without needing to know who you are.
 
-   ![Version 1](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869681459234/Screenshot_2023-09-24_at_4.34.18_AM.png)
+    ![Version 1](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869681459234/Screenshot_2023-09-24_at_4.34.18_AM.png)
 
-   ![Version 2](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869350092910/Screenshot_2023-09-24_at_4.40.02_AM.png)
+    ![Version 2](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869350092910/Screenshot_2023-09-24_at_4.40.02_AM.png)
 
 This way, both you and the service provider can benefit from the anonymity and security provided by MaskD.
 
@@ -64,72 +72,97 @@ To get MaskD up and running, follow these simple steps:
 
 1. **Copy Environment Variables**:
 
-   In the frontend directory, you'll find a file named `.env.example`. Make a copy of this file and rename it to `.env.local`. Then, open it and fill in the following information:
+    In the frontend directory, you'll find a file named `.env.example`. Make a copy of this file and rename it to `.env.local`. Then, open it and fill in the following information:
 
-   - `NEXT_PUBLIC_CONTRACT_ADDRESS`: Put the contract address for payments and subscriptions.
-   
-   - `NEXT_PUBLIC_CONTRACT_VERIFICATION_ADDRESS`: Add the contract address for verifying zero-knowledge proofs.
-   
-   - `NEXT_PUBLIC_CHAIN`: Specify your blockchain chain (e.g., Ethereum, Binance Smart Chain, etc.).
+    - `NEXT_PUBLIC_CONTRACT_ADDRESS`: Put the contract address for payments and subscriptions.
+
+    - `NEXT_PUBLIC_CONTRACT_VERIFICATION_ADDRESS`: Add the contract address for verifying zero-knowledge proofs.
+
+    - `NEXT_PUBLIC_CHAIN`: Specify your blockchain chain (e.g., Ethereum, Binance Smart Chain, etc.).
 
 2. **Install Dependencies**:
 
-   Use `yarn` to install the necessary dependencies for the frontend:
+    Use `yarn` to install the necessary dependencies for the frontend:
 
-   ```bash
-   yarn install
-   ```
+    ```bash
+    yarn install
+    ```
 
 3. **Start the Frontend**:
 
-   Launch the frontend by running the following command:
+    Launch the frontend by running the following command:
 
-   ```bash
-   yarn dev
-   ```
+    ```bash
+    yarn dev
+    ```
 
-   This will open the application in your web browser.
+    This will open the application in your web browser.
 
 ### Server
 
 1. **Navigate to the Server Directory**:
 
-   Open your terminal or command prompt and change the directory to the server folder:
+    Open your terminal or command prompt and change the directory to the server folder:
 
-   ```bash
-   cd server
-   ```
+    ```bash
+    cd server
+    ```
 
 2. **Install Dependencies**:
 
-   Use `yarn` to install the necessary dependencies for the server:
+    Use `yarn` to install the necessary dependencies for the server:
 
-   ```bash
-   yarn install
-   ```
+    ```bash
+    yarn install
+    ```
 
 3. **Start the Server**:
 
-   Start the server by running the following command:
+    Start the server by running the following command:
 
-   ```bash
-   node index.js
-   ```
+    ```bash
+    node index.js
+    ```
 
-   This will create a server running locally at `http://localhost:3001`. The frontend will use this server to create zero-knowledge proofs (ZKPs).
+    This will create a server running locally at `http://localhost:3001`. The frontend will use this server to create zero-knowledge proofs (ZKPs).
 
 With the smart contracts deployed and the frontend updated with the contract addresses, your MaskD application is ready to securely handle payments and zero-knowledge proofs for anonymous transactions.
 
 ## Why Use MaskD?
 
-- **Complete Anonymity**: MaskD allows you to use services without disclosing your personal information.
+-   **Complete Anonymity**: MaskD allows you to use services without disclosing your personal information.
 
-- **Flexible Payments**: Pay for various services anonymously, like Netflix, FanDuel, and more.
+-   **Flexible Payments**: Pay for various services anonymously, like Netflix, FanDuel, and more.
 
-- **No Personal Data Required**: Protect your privacy by avoiding the need to share personal information.
+-   **No Personal Data Required**: Protect your privacy by avoiding the need to share personal information.
 
-- **Security First**: MaskD prioritizes security to keep your transactions safe.
+-   **Security First**: MaskD prioritizes security to keep your transactions safe.
 
 ---
 
 With MaskD, you can enjoy your favorite services anonymously, whether it's Netflix, FanDuel, or others, without revealing your identity. Give it a try today!
+
+---
+
+## ETHGlobal Shenanigans
+
+1. First Impressions: Walked into ETHGlobal and BAM! They treated us like we'd just entered a techy Hogwarts. Accio goodies!
+
+2. Merch Mania: By Day 1's end, we had more merch than we had space in our bags. Seriously, if merch collection was a sport, we’d be in the Olympics. A major high-five to the sponsors for making us look cooler than we already are.
+
+3. The PolygonID Adventure:
+
+    Dived into PolygonID like it was the Mariana Trench of tech.
+    Some of the docs seemed like they time-traveled from the past (hint: they were outdated).
+    Tutorials? We dissected them like it was high school biology.
+    Had our 'oops' moments but hey, what's a hackathon without some drama?
+    Issued, claimed, schemed, but the verifier played hard to get.
+
+## Tech-Takeaway
+
+PolygonID & Co.: These aren't your average tech tools; they're the superheroes we didn't know we needed. Saving the tech-day with their capes made of ZKPs.
+
+## Could’ve, Would’ve, Should’ve
+
+1. Hoodie Hoopla: If there's a "Regret of the Weekend" award, it goes to us for forgetting our hoodies. Lesson learned: always be hoodie-ready!
+2. Kudos & Confetti: Despite the bumps and the hoodie mishap, we rocked it! The support was like getting an endless supply of cheat codes. Two days? More like a techy weekend party!
