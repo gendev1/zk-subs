@@ -19,6 +19,8 @@ Here's a step-by-step guide to using MaskD:
 
 ![Provider Registration](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/4.png)
 
+![2](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/5.png)
+
 Service providers, such as streaming services or online platforms, can register with MaskD. They provide their details to offer their services while keeping user identities confidential.
 
 ### 3. Subscriber Creates Subscription
@@ -31,9 +33,6 @@ As a subscriber, you can create a subscription to access your desired service. C
 
 Once your subscription is set up, you'll receive a confirmation and zero-knowledge proof (ZKP) to prove your payment without revealing your identity.
 
-### 4. Access Your Service
-
-![Access Service](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/5.png)
 
 Finally, you can visit the website of your chosen service provider and use your zero-knowledge proof (ZKP) to access the service. Enjoy your favorite content or services without compromising your privacy!
 
