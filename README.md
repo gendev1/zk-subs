@@ -1,95 +1,138 @@
-# zk-subs
-A privacy preserving subscription SDK built for EVM Compatible blockchains
-Built using Polygon ID, and Unlock Protocol, Lit Protocol, Graph Protocol
+Certainly! Here's the full README for your MaskD project:
 
-## TODO
+# MaskD - Anonymous Payments to Any Service Provider
 
-- [ ] Create keypairs for the user
-- [ ] User payment to Broker
-- [ ] Create ZKP for the user
-- [ ] Verify Contract 
-- [ ] Payment Withdraw for Provider
-- [ ] Integrate payment for Subscriber / Ideally connect Superfluid
+![MaskD Logo](https://cdn.discordapp.com/attachments/1105610567454052406/1155459855277105172/skunks.ai_an_dystopian_society_filled_with_masked_people_in_a_b_c817cb1b-a564-4e30-a442-e363db1fff78.png)
 
-### Smart Contracts
-- [ ] Complete Onchain issuer tutorial with Polygon ID
-- [ ] Create Subscription NFTs with Unlock Protocol
-- [ ] Create Keys using Lit Protocol to encrypt wallet address
-- [ ] Create Sub graph using Graph Protocol
+## What is MaskD?
 
-### UI
+MaskD is a revolutionary tool that empowers you to make anonymous payments to any service provider you choose. Whether it's streaming services like Netflix, online gaming platforms like FanDuel, or any other service, MaskD lets you keep your identity a secret while accessing the services you love.
 
-**Provider**
+## User Flow
 
-- [ ] Create Provider Components
-- [ ] Wallet Connection (**use ThirdWeb or any other**)
-- [ ] Provider Form (name, id (auto), wallet address))
-- [ ] Connect Provider Contract 
+Here's a step-by-step guide to using MaskD:
 
-**Subscriber**
+### 1. Get Started
 
-- [ ] Create Subscriber Components
-- [ ] Wallet Connection (**use ThirdWeb or any other**) for payments
-- [ ] Create Key Pairs using (ThirdWeb or any other)
-- [ ] Subscriber Form (created public key, sub-id(auto))
-- [ ] Make payment to Broker
-- [ ] Send transaction hash, public_key, sub-id to **Broker Backend**
-- [ ] **Broker Backend** Verify the transaction hash and create ZKP
-- [ ] **Broker Backend** Send ZKP to **Broker Frontend**
-- [ ] Download button for ZKP
-
-**Provider Auth Page**
-
-- [ ] Create component or lirary for Provider Auth
-- [ ] Button (Auth with ZK-Subs)
-- [ ] OnClick open a model with option to upload ZKP
-- [ ] Upload ZKP and verify using Verification Contract
-- [ ] **Provider** should also be able to verify the transaction hash using **Broker Backend**
-- [ ] If verified, show the service to the user
+![Get Started](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/1.png)
 
 
-**Nice To Haves**
-- [ ] Integrate bridge to allow streams on any chain, Can be a project seperately altogether
-- [ ] Deploy to starknet
+### 2. Provider Adds Their Details
 
+![Provider Registration](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/4.png)
 
-### Provider -> Broker Registration
-```javascript
-//Sample data
-{
-    id,
-    name,
-    address  
-}
-```
+Service providers, such as streaming services or online platforms, can register with MaskD. They provide their details to offer their services while keeping user identities confidential.
 
-### User -> Broker Payments
-```javascript
-//User makes a payment
-// ZKP is generated using our backend
-{
-    providerId,
-    subscriberId,
-    address,
-    uniqueId
-}
+### 3. Subscriber Creates Subscription
 
-// Along with above details, a unique is passed to ZKP generator so that no one can tamper the data
+![Subscriber Subscription](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/2.png)
 
-// User then gets a proof where it can be submitted to Provider
-```
+As a subscriber, you can create a subscription to access your desired service. Choose the service provider you want and set up your subscription through MaskD.
 
-### Provider -> Broker Verification
-```javascript
-// Provider sends the proof to Broker to verify the payment
-{
-    proof
-}
+![Subscriber Subscription](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/3.png)
 
-// ONce verified, Provider provides the service to the user
+Once your subscription is set up, you'll receive a confirmation and zero-knowledge proof (ZKP) to prove your payment without revealing your identity.
 
-// Provider will be able to verify using Brokers library
-```
+### 4. Access Your Service
 
+![Access Service](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/5.png)
 
+Finally, you can visit the website of your chosen service provider and use your zero-knowledge proof (ZKP) to access the service. Enjoy your favorite content or services without compromising your privacy!
 
+With MaskD, you can seamlessly navigate the process of subscribing to services while maintaining your anonymity, allowing you to enjoy online services securely and privately.
+
+## How Does It Work?
+
+Here's how you can use MaskD to pay for services:
+
+1. **Provider Registration**: Service providers register with us, indicating they want to accept payments through MaskD.
+
+2. **Pay Through Us**: You start by paying us (the middleman).
+
+3. **Get Zero-Knowledge Proof**: Once you've paid, we send you a zero-knowledge proof to prove you made the payment.
+
+4. **Access Your Service**: Then, you go to the website of the service you want, like Netflix or FanDuel, and show them your zero-knowledge proof. They'll give you access without needing to know who you are.
+
+   ![Version 1](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869681459234/Screenshot_2023-09-24_at_4.34.18_AM.png)
+
+   ![Version 2](https://cdn.discordapp.com/attachments/1155039444852822027/1155462869350092910/Screenshot_2023-09-24_at_4.40.02_AM.png)
+
+This way, both you and the service provider can benefit from the anonymity and security provided by MaskD.
+
+## How to Run?
+
+To get MaskD up and running, follow these simple steps:
+
+### Frontend
+
+1. **Copy Environment Variables**:
+
+   In the frontend directory, you'll find a file named `.env.example`. Make a copy of this file and rename it to `.env.local`. Then, open it and fill in the following information:
+
+   - `NEXT_PUBLIC_CONTRACT_ADDRESS`: Put the contract address for payments and subscriptions.
+   
+   - `NEXT_PUBLIC_CONTRACT_VERIFICATION_ADDRESS`: Add the contract address for verifying zero-knowledge proofs.
+   
+   - `NEXT_PUBLIC_CHAIN`: Specify your blockchain chain (e.g., Ethereum, Binance Smart Chain, etc.).
+
+2. **Install Dependencies**:
+
+   Use `yarn` to install the necessary dependencies for the frontend:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the Frontend**:
+
+   Launch the frontend by running the following command:
+
+   ```bash
+   yarn dev
+   ```
+
+   This will open the application in your web browser.
+
+### Server
+
+1. **Navigate to the Server Directory**:
+
+   Open your terminal or command prompt and change the directory to the server folder:
+
+   ```bash
+   cd server
+   ```
+
+2. **Install Dependencies**:
+
+   Use `yarn` to install the necessary dependencies for the server:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the Server**:
+
+   Start the server by running the following command:
+
+   ```bash
+   node index.js
+   ```
+
+   This will create a server running locally at `http://localhost:3001`. The frontend will use this server to create zero-knowledge proofs (ZKPs).
+
+With the smart contracts deployed and the frontend updated with the contract addresses, your MaskD application is ready to securely handle payments and zero-knowledge proofs for anonymous transactions.
+
+## Why Use MaskD?
+
+- **Complete Anonymity**: MaskD allows you to use services without disclosing your personal information.
+
+- **Flexible Payments**: Pay for various services anonymously, like Netflix, FanDuel, and more.
+
+- **No Personal Data Required**: Protect your privacy by avoiding the need to share personal information.
+
+- **Security First**: MaskD prioritizes security to keep your transactions safe.
+
+---
+
+With MaskD, you can enjoy your favorite services anonymously, whether it's Netflix, FanDuel, or others, without revealing your identity. Give it a try today!
