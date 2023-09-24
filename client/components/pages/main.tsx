@@ -1,41 +1,59 @@
 import { Header } from "components/header";
+import { Button } from "components/ui/button";
+import Link from "next/link";
 import React from "react";
-
-const colors = [
-  "text-red-500",
-  "text-blue-500",
-  "text-green-500",
-  "text-yellow-500",
-];
-const textArt = `
-  _____ _    _ ______  _____ _____ _______ 
- |_   _| |  | |  ____|/ ____|  __ \__   __|
-   | | | |  | | |__  | (___ | |__) | | |   
-   | | | |  | |  __|  \___ \|  ___/  | |   
-  _| |_| |__| | |____ ____) | |      | |   
- |_____|_____/|______|_____/|_|      |_|   
-`;
-
-const getRandomColor = () => {
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-};
+import { RoughNotation } from "react-rough-notation";
 
 const Main = () => {
-  const colorClass = getRandomColor();
   return (
-    <main className="">
+    <main className="bg-white dark:bg-black">
       <Header />
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className={`text-4xl font-bold ${colorClass} mb-6`}>
-          Random Text Art
-        </h1>
-        <pre className="text-white font-mono bg-gray-800 p-4 rounded-lg">
-          {textArt}
-        </pre>
-        <p className={`text-lg mt-6 ${colorClass}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+      <div className="flex bg-dotted-spacing-4 bg-dotted-[#242424]  flex-col items-center justify-center h-screen">
+        <div className="group relative m-2 rounded-sm opacity-100">
+          <div className={`absolute -inset-1  opacity-100  blur-3xl`}>
+            <h1 className={`text-8xl max-w-5xl text-center font-black mb-6`}>
+              <span className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
+                Anonymous payments to your service providers
+              </span>
+            </h1>
+          </div>
+          <div className="items-top relative flex justify-start leading-none">
+            <div className="flex items-center justify-center ">
+              <h1 className={`text-8xl max-w-5xl text-center font-black mb-6`}>
+                <span className="bg-gradient-to-r bg-clip-text text-transparent">
+                  <RoughNotation
+                    animationDuration={1000}
+                    type="highlight"
+                    color="white"
+                    show={true}
+                  >
+                    <span className="text-black">Anonymous</span>
+                  </RoughNotation>{" "}
+                  <div>
+                    <span className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
+                      {" "}
+                      payments to your fav service providers
+                    </span>
+                  </div>
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <Link href={"/subscriber"}>
+          <Button className="mt-10" variant="default">
+            {" "}
+            Get Started
+          </Button>
+        </Link>
+
+        <h3 className="mt-4 opacity-75 font-light">
+          If you are a provider,{" "}
+          <span className="underline cursor-pointer">
+            {" "}
+            <Link href={"/provider"}>Register here</Link>
+          </span>{" "}
+        </h3>
       </div>
     </main>
   );
