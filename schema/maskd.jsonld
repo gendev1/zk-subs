@@ -1,0 +1,23 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "userpayment": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:9cf17d93-e17c-4449-9a27-e05794b614ea#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "isnotused": {
+                        "@id": "polygon-vocab:isnotused",
+                        "@type": "xsd:boolean"
+                    }
+                },
+                "@id": "urn:uuid:2faffbaf-af03-46ad-89a9-1d9e4d618c8a"
+            }
+        }
+    ]
+}
